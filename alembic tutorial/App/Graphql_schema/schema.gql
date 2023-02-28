@@ -1,0 +1,21 @@
+schema {
+    query: Query
+}
+
+type Query {
+    school: [School]
+    teacher(school_id: Int): [teachers]
+}
+
+type School {
+    id : Int
+    Name: String
+}
+
+type teachers {
+    id: Int
+    Name: String
+    department_id: ID
+    department_name: String
+    school_id : [School]
+}
