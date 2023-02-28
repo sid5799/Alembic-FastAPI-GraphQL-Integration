@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
 
-engine = create_engine('mysql://root:sid1234@localhost:3306/demo')
+engine = create_engine('your_database_connectivity_url')
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
